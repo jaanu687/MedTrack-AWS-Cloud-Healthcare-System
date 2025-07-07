@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Book Appointment{% endblock %}
+{% block content %}
+<h2>Book an Appointment</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label>Patient Name</label>
+        <input type="text" name="patient_name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Date</label>
+        <input type="date" name="date" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Time</label>
+        <input type="time" name="time" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label>Reason</label>
+        <textarea name="reason" class="form-control"></textarea>
+    </div>
+    <label>Doctor</label>
+<select name="doctor" class="form-control" required>
+    <option value="">Select Doctor</option>
+    <option value="dr_pavani">Dr. Pavani</option>
+    <option value="dr_john">Dr. John</option>
+    <option value="dr_yamini">Dr. Yamini</option>
+
+    <!-- Add more registered doctors here -->
+</select>
+
+    <button type="submit" class="btn btn-success">Book</button>
+</form>
+{% endblock %}

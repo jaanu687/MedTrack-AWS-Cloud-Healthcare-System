@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h2>Welcome, {{ username }}!</h2>
+<p class="lead">Access your dashboard or book an appointment below.</p>
+<div class="mt-4">
+    <a href="{{ url_for('patient_dashboard') }}" class="btn btn-info">Patient Dashboard</a>
+    <a href="{{ url_for('book_appointment') }}" class="btn btn-success">Book Appointment</a>
+    <a href="{{ url_for('doctor_dashboard') }}" class="btn btn-success">Doctor Dashboard</a>
+</div>
+{% endblock %}

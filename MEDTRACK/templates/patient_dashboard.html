@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Patient Dashboard{% endblock %}
+{% block content %}
+<h2>Welcome, {{ username }}</h2>
+<p>Total Appointments: {{ total_appointments }}</p>
+<p>Upcoming: {{ upcoming_appointments }}</p>
+
+<h4>Upcoming Appointments</h4>
+<ul class="list-group">
+    {% for appt in upcoming_appointments_list %}
+        <li class="list-group-item">
+            {{ appt.date }} – {{ appt.time }} with Dr. {{ appt.doctor }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
